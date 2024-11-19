@@ -2,5 +2,5 @@
 title: "Développeur Junior Full Stack"
 image: "/image/mini.png"
 alt: "Développeur Junior Full Stack"
-description: "Contrat en alternance chez la DNE à partir de septembre 2024."
+description: "Contrat en alternance, Direction du numérique pour l'éducation (2024-26)"
 ---
