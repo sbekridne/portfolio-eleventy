@@ -1,0 +1,31 @@
+
+{% extends "base.njk" %}
+
+{% block title %}Expérience - Salim Bekri{% endblock %}
+
+{% block content %}
+        <link rel="stylesheet" href="/css/styles_experience.css">
+<h1>Expériences</h1>
+<hr>
+<h2><u>Projets Universitaires</u></h2>
+<div class="projects-section">
+    {% for project in collections.university %}
+    <div class="project-card">
+        <img src="{{ project.data.image }}" alt="{{ project.data.alt }}" class="project-image">
+        <h3>{{ project.data.title }}</h3>
+          <p class="project-description">{{ project.data.description }}</p>
+    </div>
+    {% endfor %}
+</div>
+<hr>
+<h2><u>Expériences Professionnelles</u></h2>
+<div class="experience-section">
+    {% for project in collections.professional %}
+    <div class="experience-card">
+        <img src="{{ project.data.image }}" alt="{{ project.data.alt }}" class="experience-image">
+        <h3>{{ project.data.title }}</h3>
+          <p class="project-description">{{ project.data.description }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

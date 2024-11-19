@@ -1,0 +1,202 @@
+/* styles_contact.css */
+
+/* Styles existants */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+    margin: 0;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px 20px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.navbar li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: blue;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 20px;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: inherit;
+}
+
+.contact-item img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.contact-item p {
+    margin: 0;
+    font-size: 16px;
+    text-align: center;
+}
+
+.contact-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.contact-item:hover {
+    background-color: #ececec;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+hr {
+    width: 50%;
+    border: 0;
+    border-bottom: 1px solid #D0D0D0;
+    margin: 3em auto;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        align-items: center; /* Assure que les items sont centrés */
+        gap: 20px;
+    }
+
+    .contact-item {
+        width: 80%; /* Réduire la largeur pour les petits écrans */
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar li {
+        margin: 0 10px;
+    }
+
+    .contact-item {
+        width: 90%; /* Réduire davantage la largeur pour les très petits écrans */
+        padding: 10px;
+    }
+
+    .contact-item p {
+        font-size: 14px;
+    }
+}
+
+/* Styles pour la section des commentaires */
+.comments-section {
+    margin-top: 50px;
+    text-align: center;
+}
+
+#comment-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#comment-form input[type="text"],
+#comment-form input[type="email"],
+#comment-form textarea {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#comment-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#comment-form button:hover {
+    background-color: #555;
+}
+
+#comments-container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.comment {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

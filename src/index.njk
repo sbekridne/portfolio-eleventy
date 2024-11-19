@@ -1,0 +1,60 @@
+
+{% extends "base.njk" %}
+
+{% block title %}Présentation - Salim Bekri{% endblock %}
+
+{% block content %}
+        <link rel="stylesheet" href="css/styles_index.css">
+<h1>Présentation</h1>
+<hr>
+<h1>Salim Bekri</h1>
+<p>Étudiant à l'IUT d'Orsay, alternant chez la DNE en tant que développeur full stack</p>  
+<a href="https://www.education.gouv.fr/direction-du-numerique-pour-l-education-dne-9983" target="_blank" class="skill-card-link"> 
+    <p>(Direction du numérique pour l'éducation)</p> 
+</a>
+<hr>
+<h2><u>Formation</u></h2>
+<div class="skills-section">
+    {% for education in collections.education %}
+    <a href="{{ education.data.link }}" target="_blank" class="skill-card-link">
+        <div class="skill-card">
+            <img src="{{ education.data.icon }}" alt="{{ education.data.title }}">
+            <h3>{{ education.data.title }}</h3>
+            <p>{{ education.data.description }}</p>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+<hr>
+<h2><u>Mes Compétences</u></h2>
+<div class="skills-section">
+    {% for skill in collections.skills %}
+    <div class="skill-card">
+        <img src="{{ skill.data.icon }}" alt="{{ skill.data.title }}">
+        <h3>{{ skill.data.title }}</h3>
+        <p>{{ skill.data.description }}</p>
+    </div>
+    {% endfor %}
+</div>
+<hr>
+<h2><u>Langues</u></h2>
+<div class="skills-section">
+    {% for language in collections.languages %}
+    <div class="skill-card">
+        <img src="{{ language.data.icon }}" alt="{{ language.data.title }}">
+        <h3>{{ language.data.title }}</h3>
+    </div>
+    {% endfor %}
+</div>
+<hr>
+<h2><u>Loisirs</u></h2>
+<div class="skills-section">
+    {% for hobby in collections.hobbies %}
+    <div class="skill-card">
+        <img src="{{ hobby.data.icon }}" alt="{{ hobby.data.title }}">
+        <h3>{{ hobby.data.title }}</h3>
+        <p>{{ hobby.data.description }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

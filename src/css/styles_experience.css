@@ -1,0 +1,188 @@
+/* Styles de base */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+    margin: 0;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px 20px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.navbar li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: blue;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Styles de la section des projets et de l'expérience */
+.projects-section, .experience-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.project-card, .experience-card {
+    display: flex;
+    flex-direction: column; /* Empile l'image, le titre, et la description verticalement */
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 80%; /* Augmentez la taille de la div */
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-image, .experience-image {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px; /* Espace sous l'image */
+}
+
+.project-content, .experience-content {
+    display: flex;
+    flex-direction: column; /* Aligne le texte en colonne */
+}
+
+.project-card h3, .experience-card h3 {
+    font-size: 18px;
+    margin: 10px 0; /* Espacement autour du titre */
+}
+
+.project-card p, .experience-card p {
+    margin-top: 10px; /* Espace au-dessus de la description */
+    font-size: 14px;
+    color: #666;
+}
+
+hr {
+    width: 50%;
+    border: 0;
+    border-bottom: 1px solid #D0D0D0;
+    margin: 3em auto;
+}
+
+.skill-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.arrow {
+    width: 20px;
+    height: 20px;
+    margin: 0 10px;
+    align-self: center;
+}
+
+/* Styles pour les petites résolutions */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .projects-section, .experience-section {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .project-card, .experience-card {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .project-image, .experience-image {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+    }
+
+    .project-content, .experience-content {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar li {
+        margin: 0 10px;
+    }
+
+    .project-card, .experience-card {
+        padding: 10px;
+    }
+
+    .project-card h3, .experience-card h3 {
+        font-size: 16px;
+    }
+
+    .project-card p, .experience-card p {
+        font-size: 12px;
+    }
+}

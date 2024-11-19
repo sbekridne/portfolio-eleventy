@@ -1,0 +1,36 @@
+
+{% extends "base.njk" %}
+
+{% block title %}Contact - Salim Bekri{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="/css/style_contact.css">
+{% endblock %}
+
+{% block content %}
+<h1>Contact</h1>
+<hr>
+<div class="contact-info">
+    {% for contact in collections.contact %}
+    <div class="contact-item">
+        <img src="{{ contact.data.icon }}" alt="{{ contact.data.title }}" class="contact-icon">
+        <p>{{ contact.data.info }}</p>
+        {% if contact.data.link %}
+        <a href="{{ contact.data.link }}" target="_blank">{{ contact.data.title }}</a>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+<div class="comments-section">
+    <h1>Laissez un commentaire</h1>
+    <form id="comment-form">
+        <input type="text" id="nom-input" placeholder="Nom" required>
+        <input type="text" id="prenom-input" placeholder="Prénom" required>
+        <input type="email" id="email-input" placeholder="Email" required>
+        <input type="text" id="pseudo-input" placeholder="Pseudo" required>
+        <textarea id="comment-input" rows="4" placeholder="Écrivez votre commentaire ici..." required></textarea>
+        <button type="submit">Envoyer</button>
+    </form>
+    <div id="comments-container"></div>
+</div>
+{% endblock %}
